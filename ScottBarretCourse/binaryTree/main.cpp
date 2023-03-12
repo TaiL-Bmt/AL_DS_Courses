@@ -12,7 +12,8 @@ int main()
     bst->insert(13);
     bst->insert(19);
     bst->print();
-    bst->contains(6);
-    bst->contains(30);
+    //bst->contains(6);
+    //bst->contains(30);
+    bst->bfs();
     return 0;
 }

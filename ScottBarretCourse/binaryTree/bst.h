@@ -13,4 +13,5 @@ public:
     void printInOrder(Node* node);
     bool insert(int32_t val);
     bool contains(int32_t val);
+    void bfs();
 };

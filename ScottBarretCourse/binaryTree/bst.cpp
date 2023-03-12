@@ -1,3 +1,4 @@
+#include <queue>
 #include "bst.h"
 
 Bst::Bst(int32_t val)
@@ -70,4 +71,21 @@ bool Bst::contains(int32_t val)
     }
     std::cout << "cannot found value " << val << std::endl;
     return false;
+}
+
+void Bst::bfs()
+{
+    std::queue<Node*> q;
+    q.push(root);
+    while (q.size() > 0) {
+        Node* curNode {q.front()};
+        q.pop();
+        curNode->print();
+        if (curNode->left != nullptr) {
+            q.push(curNode->left);
+        }
+        if (curNode->right != nullptr) {
+            q.push(curNode->right);
+        }
+    }
 }
